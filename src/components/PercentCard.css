@@ -1,5 +1,5 @@
 .percentCard {
-  position: relative;
+  /* position: relative; */
   width: 185px;
   height: 104px;
   padding: 23px 20px 7px 23px;
@@ -7,36 +7,36 @@
   box-shadow: 0px 11px 11px -2px #1018280f;
   border-radius: 24px;
   outline: 2px solid #ffffff;
-
   transition: all 0.6s;
 }
 .percentCard:hover {
   outline: 2px solid #6941c6b7;
   box-shadow: 0px 7px 11px -4px #7e65b8;
 }
+.percentCard-flex-container{
+  display: flex;
+  justify-content: space-between;
+}
 .percentCard h3 {
   font-weight: 700;
   font-size: 18px;
   color: #101828;
   margin: 0;
-  /* margin-top: 10px; */
+  margin-bottom: 18px;
 }
 .percentCard p {
+  display: inline;
   font-weight: 700;
   font-size: 40px;
   margin: 0;
-  margin-top: 20px;
 }
 .percentCard-badge {
-  /* width: 76px; */
-  /* height: 32px; */
-  padding: 7px 9px;
+  height: 12px;
+  padding: 5px 8px 14px 7px;
   border-radius: 40px;
   font-weight: 700;
   font-size: 18px;
-  position: absolute;
-  top: 50px;
-  right: 22px;
+  translate: -5px -10px;
 }
 .primary {
   background-color: #d1fadf;

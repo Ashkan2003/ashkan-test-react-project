@@ -13,8 +13,10 @@ const PercentCard = ({ percentCard }: Props) => {
   return (
     <div className="percentCard">
       <h3>{percentCard.title}</h3>
-      <p>{percentCard.count}</p>
-      <div className={`percentCard-badge ${percentCard.badgeType ==="primary"? "primary":"secondary"}`}>{percentCard.badge}</div>
+      <div className="percentCard-flex-container">
+        <p>{percentCard.count}</p>
+        <span className={`percentCard-badge ${percentCard.badgeType ==="primary"? "primary":"secondary"}`}>{percentCard.badge}</span>
+      </div>
     </div>
   );
 };

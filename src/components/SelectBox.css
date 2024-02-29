@@ -3,17 +3,18 @@
   display: flex;
   width: 204px;
   flex-direction: column;
+  padding-bottom: 30px;
 }
 /* --------------------- */
 .selectBox {
   width: 204px;
   height: 40px;
   background: white;
-  outline: 1.5px solid rgb(55, 47, 47);
+  outline: 2px solid rgba(55, 47, 47, 0.574);
   border-radius: 4px;
   color: rgb(56, 52, 52);
   position: relative;
-  order: 0;
+  /* order: 1; */
   transition: all 0.1s;
 }
 .selectBox:hover {
@@ -37,6 +38,7 @@
   transition: all 0.4s;
 }
 #badge {
+  color: #475467;
   font-size: 10px;
   font-weight: 500;
   background-color: #f2f4f7;
@@ -65,14 +67,13 @@ input.search-form {
 }
 /* ------------- */
 .option-container {
-  position: absolute;
+  position: absolute ;
   top: 45px;
   background: #ffffff;
   margin: 5px 0px;
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
-  order: 1;
   color: rgb(56, 52, 52);
 }
 
