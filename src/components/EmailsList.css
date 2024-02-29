@@ -1,12 +1,18 @@
-.emailsList-container{
-
+.emailsList-container {
 }
-.emailsList-container h2{
-    font-size: 24px;
-    font-weight: 700;
-    color: #101828;
+.emailsList-container h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #101828;
 }
-.email-list{
-    display: grid;
-    gap: 8px;
+.email-list {
+  padding: 2px 2px 2px 2px;
+  display: grid;
+  gap: 9px;
+  overflow-y: scroll;
+  height: 270px;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.email-list::-webkit-scrollbar {
+  display: none;
 }

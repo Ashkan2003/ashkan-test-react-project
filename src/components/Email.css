@@ -1,8 +1,29 @@
 .email-container {
+  display: grid;
+  grid-template-columns: 130px 210px 300px 180px;
+  align-items: center;
+  justify-self: start;
   width: 854px;
   height: 56px;
   border-radius: 8px;
   background-color: white;
   box-shadow: 0px 0px 0px 0px #0000000f;
-  /* box-shadow: 0px 2px 4px -2px #1018280F; */
+  outline: 1px solid #ffffff;
+  transition: all 0.6s;
+}
+.email-container:hover {
+  outline: 1px solid #6941c6b7;
+  box-shadow: 0px 1px 4px 0px #7e65b8;
+}
+.email-container span {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  color: #101828;
+}
+.email-container img {
+  margin-left: 13px;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
 }
