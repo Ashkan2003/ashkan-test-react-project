@@ -2,5 +2,5 @@
   display: grid;
   width: inherit;
   grid-template-columns: repeat(auto-fill, 210px);
-  gap: 8px;
+  gap: 18px;
 }

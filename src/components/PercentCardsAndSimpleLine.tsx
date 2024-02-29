@@ -1,3 +1,4 @@
+import SimpleLineChart from "./LineChart";
 import PercentCard from "./PercentCard";
 import "./PercentCardsAndSimpleLine.css";
 
@@ -26,7 +27,10 @@ const PercentCardsAndSimpleLine = () => {
         ))}
       </div>
       {/* chart */}
-      <div>ddd</div>
+      <div className="line-chart-container">
+        <p>Revenue</p>
+        <SimpleLineChart />
+      </div>
     </div>
   );
 };
