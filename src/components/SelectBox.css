@@ -16,6 +16,7 @@
   position: relative;
   /* order: 1; */
   transition: all 0.1s;
+  cursor: pointer;
 }
 .selectBox:hover {
   outline: 2px solid #6941c6;
@@ -75,6 +76,7 @@ input.search-form {
   border-radius: 8px;
   overflow: hidden;
   color: rgb(56, 52, 52);
+  cursor: pointer;
 }
 
 .option {
@@ -114,6 +116,7 @@ input.search-form {
 /* Hide the browser's default checkbox */
 .option-label {
   position: relative;
+  cursor: pointer;
 }
 .option-label #checkBox {
   display: none;

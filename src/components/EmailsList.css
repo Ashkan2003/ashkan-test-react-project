@@ -1,0 +1,12 @@
+.emailsList-container{
+
+}
+.emailsList-container h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: #101828;
+}
+.email-list{
+    display: grid;
+    gap: 8px;
+}

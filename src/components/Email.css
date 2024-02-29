@@ -1,0 +1,8 @@
+.email-container {
+  width: 854px;
+  height: 56px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0px 0px 0px 0px #0000000f;
+  /* box-shadow: 0px 2px 4px -2px #1018280F; */
+}

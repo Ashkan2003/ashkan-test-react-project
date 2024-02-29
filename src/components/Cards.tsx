@@ -1,7 +1,8 @@
+import { cardType } from "../types/globalTypes";
 import Card from "./Card";
 import "./Cards.css";
 
-const cardArray: { title: string; des: string; icon: string }[] = [
+const cardArray: cardType[] = [
   { title: "$143.223", des: "Your bank balance", icon:  "/public/wallet-2.svg" },
   { title: "$43.110", des: "Your Tax", icon:  "/public/chart.svg" },
   { title: "24", des: "Employees working today", icon:  "/public/empty-wallet-add.svg" },

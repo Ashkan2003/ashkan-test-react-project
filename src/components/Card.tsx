@@ -1,7 +1,8 @@
+import { cardType } from "../types/globalTypes";
 import "./Card.css";
 
 interface Props {
-  card: { title: string; des: string; icon: string };
+  card: cardType;
 }
 
 const Card = ({ card }: Props) => {
