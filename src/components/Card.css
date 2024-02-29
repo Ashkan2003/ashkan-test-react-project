@@ -1,11 +1,13 @@
 .card{
-    width: 160px;
+    width: 164px;
     height: 132px;
     padding: 16px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 5px 7px -2px #1018280F;
+    box-shadow: 0px 11px 11px -2px  #1018280F;
     border-radius: 24px;
-    transition: all 0.10s;
+    outline: 3px solid #ffffff;
+
+    transition: all 0.60s;
 }
 .card:hover{
     outline: 3px solid #6941c6b7;

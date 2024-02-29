@@ -7,6 +7,7 @@ import "./App.css";
 import AccountInfo from "./components/AccountInfo";
 import Cards from "./components/Cards";
 import Menu from "./components/Menu";
+import PercentCardsAndSimpleLine from "./components/PercentCardsAndSimpleLine";
 import SelectBox from "./components/SelectBox";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <main>
           <SelectBox />
           <Cards/>
+          <PercentCardsAndSimpleLine/>
         </main>
         <AccountInfo />
       </div>

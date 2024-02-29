@@ -1,0 +1,7 @@
+.grid-container{
+    margin-top: 30px;
+}
+.percent-cards{
+    display: grid;
+    gap: 30px;
+}

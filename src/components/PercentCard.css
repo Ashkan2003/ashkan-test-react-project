@@ -1,0 +1,48 @@
+.percentCard {
+  position: relative;
+  width: 185px;
+  height: 104px;
+  padding: 23px 20px 7px 23px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 11px 11px -2px #1018280f;
+  border-radius: 24px;
+  outline: 2px solid #ffffff;
+
+  transition: all 0.6s;
+}
+.percentCard:hover {
+  outline: 2px solid #6941c6b7;
+  box-shadow: 0px 7px 11px -4px #7e65b8;
+}
+.percentCard h3 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #101828;
+  margin: 0;
+  /* margin-top: 10px; */
+}
+.percentCard p {
+  font-weight: 700;
+  font-size: 40px;
+  margin: 0;
+  margin-top: 20px;
+}
+.percentCard-badge {
+  /* width: 76px; */
+  /* height: 32px; */
+  padding: 7px 9px;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 18px;
+  position: absolute;
+  top: 50px;
+  right: 22px;
+}
+.primary {
+  background-color: #d1fadf;
+  color: #027a48;
+}
+.secondary {
+  background-color: #fee4e2;
+  color: #f04438;
+}
