@@ -1,0 +1,31 @@
+.card{
+    width: 160px;
+    height: 132px;
+    padding: 16px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 5px 7px -2px #1018280F;
+    border-radius: 24px;
+    transition: all 0.10s;
+}
+.card:hover{
+    outline: 3px solid #6941c6b7;
+    box-shadow: 0px 7px 11px -4px #7e65b8;
+
+}
+.card h1{
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  color: #101828;
+  width: 138px;
+  height: 48px;
+  margin: 7px 0px;
+}
+.card h6{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0;
+    color: #475467;
+    max-width: 90px;
+}

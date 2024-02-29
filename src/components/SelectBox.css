@@ -1,0 +1,200 @@
+.container {
+  position: relative;
+  display: flex;
+  width: 204px;
+  flex-direction: column;
+}
+/* --------------------- */
+.selectBox {
+  width: 204px;
+  height: 40px;
+  background: white;
+  outline: 1.5px solid rgb(55, 47, 47);
+  border-radius: 4px;
+  color: rgb(56, 52, 52);
+  position: relative;
+  order: 0;
+  transition: all 0.1s;
+}
+.selectBox:hover {
+  outline: 2px solid #6941c6;
+  background-color: #f2f4f7;
+}
+.selectBox p {
+  position: absolute;
+  bottom: -5px;
+  left: 11px;
+  font-weight: 500;
+}
+.selectBox #select-box-icon {
+  position: absolute;
+  right: 10px;
+  top: 30%;
+  font-family: "Font";
+  font-weight: 700;
+  color: black;
+  transform: rotateX(180deg);
+  transition: all 0.4s;
+}
+#badge {
+  font-size: 10px;
+  font-weight: 500;
+  background-color: #f2f4f7;
+  position: absolute;
+  top: -7px;
+  left: 12px;
+}
+#badge:hover {
+  color: #6941c6;
+}
+/* ------------------ */
+form.search-form {
+  border: none;
+  padding: 0;
+  margin: 10px 10px;
+}
+
+input.search-form {
+  border: 1px solid #555;
+  border-radius: 5px;
+  width: 100%;
+  padding: 9px 4px 9px 40px;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat 13px center;
+}
+/* ------------- */
+.option-container {
+  position: absolute;
+  top: 45px;
+  background: #ffffff;
+  margin: 5px 0px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  order: 1;
+  color: rgb(56, 52, 52);
+}
+
+.option {
+  background: #f0eafb;
+  margin: 3px 11px;
+  border-radius: 4px;
+  padding: 7px 24px 7px 7px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* ----------------------------- */
+.container .option:hover {
+  background: #5b5aa63d;
+  border-radius: 5px;
+  color: #4b49b8;
+}
+
+.selectBox #search-box-icon {
+  position: absolute;
+  left: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+#option1 {
+  margin-top: 45px;
+}
+.container .option-container .active {
+  /* max-height: 240px; */
+  opacity: 1;
+  overflow-y: scroll;
+  transition: all 0.4s;
+}
+
+/* --------- */
+
+/* Hide the browser's default checkbox */
+.option-label {
+  position: relative;
+}
+.option-label #checkBox {
+  display: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+
+/* On mouse-over, add a grey background color */
+.option-label:hover input ~ .checkmark {
+  background-color: #ffffff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.option-label input:checked ~ .checkmark {
+  background-color: #6941c6;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.option-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.option-label .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.option-label #menu-title {
+  margin-left: 35px;
+}
+
+.btn {
+  background-color: #6941c6;
+  color: white;
+  width: 182px;
+  padding: 12px 68px;
+  margin-left: 11px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 3px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn:hover {
+  box-shadow: -1px 2px 1px rgb(191, 191, 191);
+  background-color: #6f4bc4;
+}
+.btn:active {
+  box-shadow: none;
+  background-color: #6941c6;
+}
+.select-box-des {
+  font-size: 14px;
+  padding: 11px;
+  display: flex;
+  justify-content: space-between;
+}
+.select-box-des #clear-btn {
+  color: #6941c6;
+}
