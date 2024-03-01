@@ -49,6 +49,12 @@ const AccountInfo = () => {
           <AddTodoBtn/>
         </div>
       </div>
+      {/* the board meeting-section */}
+      <div className="board-text">
+        <p>Board meeting</p>
+        <p>Feb 22 at 6:00 PM</p>
+        <p>You have been invited to attend a meeting of the Boeard Diretors.</p>
+      </div>
     </div>
   );
 };
