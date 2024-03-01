@@ -7,4 +7,14 @@ export type emailType = {
   date: string;
 };
 
-export type cardType = { title: string; des: string; icon: string };
+export type cardType = {
+  title: string;
+  des: string;
+  icon: string;
+};
+
+export type todoType = {
+  title: string;
+  date: string;
+  icon: string;
+};

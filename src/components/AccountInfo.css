@@ -1,5 +1,4 @@
 .account-info-container {
-  background-color: yellow;
   /* width: 303px; */
   height: 883;
   border-radius: 32px;
@@ -8,6 +7,7 @@
   background-color: white;
   box-shadow: 0px 1px 3px 0px #10182820;
 }
+/* --------icons------------- */
 .account-info-icons {
   display: flex;
   justify-content: space-between;
@@ -27,7 +27,7 @@
   width: 24px;
   height: 24px;
 }
-/* ----------------------------- */
+/* -------------status-section---------------- */
 .status-container {
   font-family: Josefin Sans;
   padding: 24px;
@@ -44,7 +44,6 @@
   font-weight: 700;
   font-size: 16px;
 }
-/* ----------------- */
 .progressbar-container {
   width: 218px;
   height: 20px;
@@ -57,8 +56,7 @@
   height: 20px;
   border-radius: 16px;
 }
-/* ---------------------- */
-.status-container .second-text-box{
+.status-container .second-text-box {
   margin: 27px 0px;
   display: grid;
   gap: 10px;
@@ -74,7 +72,6 @@
   font-weight: 700;
   color: #667085;
 }
-/* --------------------- */
 .status-container .view-btn {
   background-color: #6941c6;
   color: white;
@@ -98,4 +95,12 @@
   background-color: #42307d;
   color: white;
 }
-/* --------------- */
+/* --------todo-info-------- */
+.todo-info-container {
+  width: 271px;
+  /* height: 491px; */
+}
+.todo-info-container .todo-list {
+  display: grid;
+  gap: 25px;
+}

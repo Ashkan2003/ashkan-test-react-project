@@ -1,4 +1,14 @@
+import { todoType } from "../types/globalTypes";
 import "./AccountInfo.css";
+import AddTodoBtn from "./AddTodoBtn";
+import Todo from "./Todo";
+
+const todoList: todoType[] =[
+  {title:"Run payroll",date:"Mar 4 at 6:00 pm",icon:"/public/todo-list-imgs/receipt.svg"},
+  {title:"Review time off request",date:"Mar 7 at 8:00 pm",icon:"/public/todo-list-imgs/clock.svg"},
+  {title:"Sign board resoluation",date:"Mar 12 at 8:30 pm",icon:"/public/todo-list-imgs/clipboard-text.svg"},
+]
+
 const AccountInfo = () => {
   return (
     <div className="account-info-container">
@@ -10,7 +20,7 @@ const AccountInfo = () => {
         <img id="avatar" src="/public/accountInfo-imgs/avatar-1.jpg" />
         <img id="arrow-down-icon" src="/public/accountInfo-imgs/arrow-down.svg" />
       </div>
-      {/* the status part of account-info */}
+      {/* the status-section */}
       <div className="status-container">
         {/* the text-box */}
         <div className="first-text-box">
@@ -28,6 +38,16 @@ const AccountInfo = () => {
         </div>
         {/* the view btn */}
         <button className="view-btn">View status</button>
+      </div>
+      {/* the todo-section */}
+      <div className="todo-info-container">
+        <h2>Your to-Do list</h2>
+        <div className="todo-list">
+          {todoList.map((todo,index)=>(
+            <Todo key={index} todo={todo}/>
+          ))}
+          <AddTodoBtn/>
+        </div>
       </div>
     </div>
   );

@@ -10,10 +10,10 @@
   transition: all 0.6s;
 }
 .percentCard:hover {
-  border: 2px solid #9E77ED;
+  border: 2px solid #9e77ed;
   box-shadow: 0px 7px 11px -4px #7e65b8;
 }
-.percentCard-flex-container{
+.percentCard-flex-container {
   display: flex;
   justify-content: space-between;
 }

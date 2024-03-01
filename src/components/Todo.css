@@ -1,0 +1,25 @@
+.todo-container {
+  display: flex;
+}
+
+.todo-container #todo-icon {
+  /* width: 40px; */
+  /* height: 40px; */
+  padding: 8px;
+  margin-right: 14px;
+  border-radius: 16px;
+  background-color: #f9f5ff;
+}
+
+.todo-container .texts :nth-child(1) {
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+.todo-container .texts :nth-child(2) {
+  font-size: 12px;
+  font-weight: 700;
+  color: #98a2b3;
+  margin: 0;
+}
