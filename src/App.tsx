@@ -1,8 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import "./App.css";
 import AccountInfo from "./components/AccountInfo";
 import Cards from "./components/Cards";
@@ -18,9 +13,9 @@ function App() {
       <div className="flex-container">
         <main>
           <SelectBox />
-          <Cards/>
-          <PercentCardsAndSimpleLine/>
-          <EmailsList/>
+          <Cards />
+          <PercentCardsAndSimpleLine />
+          <EmailsList />
         </main>
         <AccountInfo />
       </div>
