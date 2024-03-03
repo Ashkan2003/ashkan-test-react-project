@@ -1,6 +1,6 @@
 .cards-container {
   display: grid;
-  width: inherit;
+  /* width: inherit; */
   grid-template-columns: repeat(auto-fill, 210px);
-  gap: 18px;
+  gap: 14px;
 }

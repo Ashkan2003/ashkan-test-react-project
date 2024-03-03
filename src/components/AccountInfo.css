@@ -1,9 +1,8 @@
 .account-info-container {
-  /* width: 303px; */
   height: 757px;
   border-radius: 32px;
   padding: 24px 16px 24px 16px;
-  margin: 30px;
+  margin-top: 102px;
   background-color: white;
   box-shadow: 0px 1px 3px 0px #10182820;
 }
