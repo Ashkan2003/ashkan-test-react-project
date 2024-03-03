@@ -1,11 +1,10 @@
 .add-todo-container {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .add-todo-container #add-todo-icon {
-  /* width: 40px; */
-  /* height: 40px; */
   padding: 8px;
   margin-right: 14px;
   border-radius: 16px;
@@ -13,7 +12,6 @@
 }
 
 .add-todo-container p {
-  padding-bottom: 5px;
   font-size: 16px;
   font-weight: 700;
   margin: 0;

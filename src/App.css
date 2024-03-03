@@ -3,8 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
+  
 }
 .root-container {
+  background-color: #f2f4f7;
+  /* filter: blur(2px) brightness(0.7); */
   display: flex;
 }
 .flex-container {
@@ -13,6 +16,5 @@
 }
 main {
   width: 916px;
-  background-color: #f2f4f7;
   padding: 32px 0px 32px 62px;
 }

@@ -131,3 +131,97 @@
   font-family: Josefin Sans;
   line-height: 17.06px;
 }
+/* --------modal-------- */
+.modal-container {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1513px;
+  height: 1046px;
+  border-radius: 4px;
+  /* this styles if for the blur functionality */
+  background-color: rgba(2, 2, 2, 0.303);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+.modal {
+  background: white;
+  width: 628px;
+  height: 700px;
+  /* padding: 30px; */
+  border-radius: 4px;
+  position: absolute;
+  left: 47%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  animation: 0.5s drop;
+}
+@keyframes drop {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 50%;
+  }
+}
+.modal .modal-title {
+  color: #6941c6;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+}
+/* the title input */
+.modal form .title-box {
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  width: 567px;
+}
+.modal form #title-input {
+  font-size: 16px;
+  width: inherit;
+  font-weight: 400;
+  padding-left: 13px;
+  height: 56px;
+  border: 1px solid #79747e;
+  border-radius: 4px;
+}
+.modal form #title-lable {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.modal form #delete-input-value-btn {
+  position: absolute;
+  top: 20px;
+  right: 1px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.modal form #delete-input-value-btn:hover {
+  background-color: #f2f4f7;
+  border-radius: 50px;
+}
+/* the :focus is when the input is active */
+/* the :valid is for when the input has value mantain this style*/
+.modal form .title-box input:focus ~ label,
+.modal form .title-box input:valid ~ label {
+  left: 12px !important;
+  top: -7px !important;
+  background: #f2f4f7;
+  color: #6941c6;
+  padding: 0px 4px;
+  font-size: 12px;
+}
+.modal form #title-input:focus {
+  /* border: none; */
+  outline: 2px solid #6941c6 !important;
+}
+
+/*-------- modal open------- */
+.open-modal {
+  display: block;
+}
