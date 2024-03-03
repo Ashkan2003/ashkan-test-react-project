@@ -1,38 +1,114 @@
 .menu {
-  width: 90px;
-  height: 1, 024px;
-  /* padding: 32px 22px 32px 22px; */
-  gap: 88px;
+  position: relative;
+  width: 45px;
+  height: 1000px;
+  padding: 4px 22px 32px 22px;
   background-color: #6941c6;
+  transition: all 0.4s;
 }
+
 .menu .title {
   font-family: amita;
-  font-weight: 700px;
+  font-weight: 500;
   font-size: 20px;
   color: white;
-  margin: 0;
+  margin-bottom: 75px;
+  transition: all 0.3s;
 }
+/*--------- menu toggle btn--------------- */
+.menu .menu-toggle-btn {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  top: 70px;
+  right: -15px;
+  border: none;
+  border-radius: 100px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  padding: 4px 0px 0px 2px;
+}
+.menu .menu-toggle-btn img {
+  transition: all 0.7s;
+}
+.menu .rotated {
+  transform: rotate(180deg);
+}
+/* -------menu list------------- */
 .menu ul {
   list-style: none;
   padding: 0 !important;
   margin: 0 !important;
 }
-.menu li {
+.list li {
   display: flex;
+  position: relative;
   align-items: center;
-  border-left: 4px solid white;
-  /* border-top-left-radius: 2px; */
-  /* border-bottom-left-radius: 2px; */
-  padding: 0px 30px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
-.menu span {
+.list li:nth-child(1) .prefix-item {
+  position: absolute;
+  left: -22px;
+  background-color: white;
+  width: 4px;
+  height: 24px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.list li:nth-child(1) .list-name-button-box {
+  display: none;
+}
+.list li:nth-child(8) {
+  margin-top: 430px;
+}
+.list img {
+  margin-left: 10px;
+  transition: all 0.4s;
+}
+.list .menu-list-name {
   font-size: 16px;
   color: white;
   font-weight: 500;
+  padding-left: 22px;
+  padding-right: 10px;
+  display: none;
+  transition: all 0.6s;
 }
-.menu #icon {
-  width: 24px;
-  height: 24px;
-  color: white !important;
+
+/* --------menu active mode (open)-------- */
+.menu-open {
+  width: 138px;
+}
+.menu-open .title {
+  transform: translateX(45px);
+}
+.menu-open img {
+  margin-left: 1px;
+}
+.menu-open .menu-list-name {
+  display: block;
+}
+.menu-open li:nth-child(1) .list-name-button-box {
+  display: block;
+  position: absolute;
+  top: 23px;
+  left: 43px;
+  width: 81px;
+  border: 2.4px solid white;
+  border-radius: 50px;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.fadeInUp-animation {
+  animation: 1.5s fadeInUp;
 }
