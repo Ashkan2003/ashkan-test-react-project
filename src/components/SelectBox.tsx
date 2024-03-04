@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import { useState } from "react";
 import { HiMiniChevronDown } from "react-icons/hi2";
 import { HiMiniChevronUp } from "react-icons/hi2";

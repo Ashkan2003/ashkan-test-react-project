@@ -10,17 +10,17 @@ const todoList: todoType[] = [
   {
     title: "Run payroll",
     date: "Mar 4 at 6:00 pm",
-    icon: "/public/todo-list-imgs/receipt.svg",
+    icon: "/todo-list-imgs/receipt.svg",
   },
   {
     title: "Review time off request",
     date: "Mar 7 at 8:00 pm",
-    icon: "/public/todo-list-imgs/clock.svg",
+    icon: "/todo-list-imgs/clock.svg",
   },
   {
     title: "Sign board resoluation",
     date: "Mar 12 at 8:30 pm",
-    icon: "/public/todo-list-imgs/clipboard-text.svg",
+    icon: "/todo-list-imgs/clipboard-text.svg",
   },
 ];
 
@@ -28,55 +28,55 @@ const personListArray: personType[] = [
   {
     name: "Matin abbasi",
     id: "0234",
-    icon: "/public/modal-imgs/avatar-1.png",
+    icon: "/modal-imgs/avatar-1.png",
     checked: "true",
   },
   {
     name: "Matin ghadri",
     id: "0874",
-    icon: "/public/modal-imgs/avatar-2png.png",
+    icon: "/modal-imgs/avatar-2png.png",
     checked: "true",
   },
   {
     name: "Matin kazemi",
     id: "0987",
-    icon: "/public/modal-imgs/avatar-3.png",
+    icon: "/modal-imgs/avatar-3.png",
     checked: "false",
   },
   {
     name: "Matin hasani",
     id: "0787",
-    icon: "/public/modal-imgs/avatar-4.png",
+    icon: "/modal-imgs/avatar-4.png",
     checked: "false",
   },
   {
     name: "Matin moham",
     id: "0787",
-    icon: "/public/modal-imgs/avatar-7png.png",
+    icon: "/modal-imgs/avatar-7png.png",
     checked: "false",
   },
   {
     name: "Matin alipour",
     id: "0727",
-    icon: "/public/modal-imgs/avatar-6.png",
+    icon: "/modal-imgs/avatar-6.png",
     checked: "false",
   },
   {
     name: "Matin kazemi",
     id: "0987",
-    icon: "/public/modal-imgs/avatar-3.png",
+    icon: "/modal-imgs/avatar-3.png",
     checked: "false",
   },
   {
     name: "Matin rezaie",
     id: "0234",
-    icon: "/public/modal-imgs/avatar-1.png",
+    icon: "/modal-imgs/avatar-1.png",
     checked: "false",
   },
   {
     name: "Matin ghaadri",
     id: "0874",
-    icon: "/public/modal-imgs/avatar-2png.png",
+    icon: "/modal-imgs/avatar-2png.png",
     checked: "true",
   },
 ];
@@ -116,7 +116,7 @@ const AccountInfo = () => {
   // add new todo to todo-list when the user submit the form
   const handleAddNewTodo = () => {
     todoList.push({
-      icon: "/public/todo-list-imgs/clipboard-task.svg",
+      icon: "/todo-list-imgs/clipboard-task.svg",
       title: inputTitleValue,
       date: "Mar 12 at 9:30 pm",
     });
@@ -127,20 +127,11 @@ const AccountInfo = () => {
     <div className="account-info-container">
       {/* the top icons of the account-info */}
       <div className="account-info-icons">
-        <img className="icon" src="/public/accountInfo-imgs/calendar.svg" />
-        <img
-          className="icon"
-          src="/public/accountInfo-imgs/notification-bing.svg"
-        />
-        <img
-          className="icon"
-          src="/public/accountInfo-imgs/message-notif.svg"
-        />
-        <img id="avatar" src="/public/accountInfo-imgs/avatar-1.jpg" />
-        <img
-          id="arrow-down-icon"
-          src="/public/accountInfo-imgs/arrow-down.svg"
-        />
+        <img className="icon" src="/accountInfo-imgs/calendar.svg" />
+        <img className="icon" src="/accountInfo-imgs/notification-bing.svg" />
+        <img className="icon" src="/accountInfo-imgs/message-notif.svg" />
+        <img id="avatar" src="/accountInfo-imgs/avatar-1.jpg" />
+        <img id="arrow-down-icon" src="/accountInfo-imgs/arrow-down.svg" />
       </div>
       {/* the status-section */}
       <div className="status-container">
@@ -196,7 +187,7 @@ const AccountInfo = () => {
               <img
                 onClick={handleClearTitleInputValue}
                 id="delete-input-value-btn"
-                src="/public/modal-imgs/close-circle.svg"
+                src="/modal-imgs/close-circle.svg"
                 alt="close-btn"
               />
             </div>
@@ -212,7 +203,7 @@ const AccountInfo = () => {
               <label id="add-person-lable">add person</label>
               <img
                 id="arrow-down-btn"
-                src="/public/modal-imgs/arrow-drop-down.svg"
+                src="/modal-imgs/arrow-drop-down.svg"
                 alt="arrowBtn"
               />
               <div className="checked-badge-container">

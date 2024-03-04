@@ -8,7 +8,7 @@ interface Props {
 const AddTodoBtn = ({ handleToggleModal }: Props) => {
   return (
     <div onClick={handleToggleModal} className="add-todo-container">
-      <img id="add-todo-icon" src="/public/todo-list-imgs/add-square.svg" />
+      <img id="add-todo-icon" src="/todo-list-imgs/add-square.svg" />
       <p>Add to Do</p>
     </div>
   );

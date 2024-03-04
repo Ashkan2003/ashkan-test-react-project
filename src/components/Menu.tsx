@@ -7,14 +7,14 @@ type menuLiType = {
 };
 
 const menuList: menuLiType[] = [
-  { title: "Dashboard", icon: "/public/svgs/home.svg" },
-  { title: "Report", icon: "/public/svgs/chart.svg" },
-  { title: "Bank", icon: "/public/svgs/bank.svg" },
-  { title: "Email", icon: "/public/svgs/email.svg" },
-  { title: "Group", icon: "/public/svgs/people.svg" },
-  { title: "List", icon: "/public/svgs/list.svg" },
-  { title: "Finance", icon: "/public/svgs/money.svg" },
-  { title: "Setting", icon: "/public/svgs/settings.svg" },
+  { title: "Dashboard", icon: "/svgs/home.svg" },
+  { title: "Report", icon: "/svgs/chart.svg" },
+  { title: "Bank", icon: "/svgs/bank.svg" },
+  { title: "Email", icon: "/svgs/email.svg" },
+  { title: "Group", icon: "/svgs/people.svg" },
+  { title: "List", icon: "/svgs/list.svg" },
+  { title: "Finance", icon: "/svgs/money.svg" },
+  { title: "Setting", icon: "/svgs/settings.svg" },
 ];
 
 const Menu = () => {
@@ -30,7 +30,7 @@ const Menu = () => {
         <button onClick={handleClick} className="menu-toggle-btn">
           <img
             className={`${isMenuOpen && "rotated"}`}
-            src="/public/svgs/right-arrow.svg"
+            src="/svgs/right-arrow.svg"
             alt=""
           />
         </button>

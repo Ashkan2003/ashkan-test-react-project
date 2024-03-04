@@ -10,7 +10,7 @@ const Badge = ({ item }: Props) => {
     <div className="badge">
       <img className="avatar" src={item.icon} alt="person-avatar" />
       <span>{item.name}</span>
-      <img className="close-icon" src="/public/modal-imgs/close.svg" alt="" />
+      <img className="close-icon" src="/modal-imgs/close.svg" alt="" />
     </div>
   );
 };
