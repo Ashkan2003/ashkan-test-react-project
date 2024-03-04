@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { todoType, voidFunc } from "../types/globalTypes";
+import { personType, todoType, voidFunc } from "../types/globalTypes";
 import "./AccountInfo.css";
 import AddTodoBtn from "./AddTodoBtn";
 import Todo from "./Todo";
@@ -22,18 +22,74 @@ const todoList: todoType[] = [
   },
 ];
 
+const personListArray: personType[] = [
+  {
+    name: "Matin abbasi",
+    id: "0234",
+    icon: "/public/modal-imgs/avatar-1.png",
+    checked: "true",
+  },
+  {
+    name: "Matin ghadri",
+    id: "0874",
+    icon: "/public/modal-imgs/avatar-2png.png",
+    checked: "true",
+  },
+  {
+    name: "Matin kazemi",
+    id: "0987",
+    icon: "/public/modal-imgs/avatar-3.png",
+    checked: "false",
+  },
+  {
+    name: "Matin hasani",
+    id: "0787",
+    icon: "/public/modal-imgs/avatar-4.png",
+    checked: "false",
+  },
+  {
+    name: "Matin mohammadi",
+    id: "0787",
+    icon: "/public/modal-imgs/avatar-7png.png",
+    checked: "false",
+  },
+  {
+    name: "Matin alipour",
+    id: "0727",
+    icon: "/public/modal-imgs/avatar-6.png",
+    checked: "false",
+  },
+  {
+    name: "Matin kazemi",
+    id: "0987",
+    icon: "/public/modal-imgs/avatar-3.png",
+    checked: "false",
+  },
+  {
+    name: "Matin abbasi",
+    id: "0234",
+    icon: "/public/modal-imgs/avatar-1.png",
+    checked: "true",
+  },
+  {
+    name: "Matin ghadri",
+    id: "0874",
+    icon: "/public/modal-imgs/avatar-2png.png",
+    checked: "true",
+  },
+];
+
 const AccountInfo = () => {
   const [isModalOpen, setModalOpen] = useState(false);
-  const [inputTitleValue, setInputTitleValue]= useState("")
-
+  const [inputTitleValue, setInputTitleValue] = useState("");
 
   const handleToggleModal: voidFunc = () => {
     setModalOpen((isOpen) => !isOpen);
   };
 
   const handleClearTitleInputValue = () => {
-    setInputTitleValue("")
-  }
+    setInputTitleValue("");
+  };
 
   return (
     <div className="account-info-container">
@@ -96,14 +152,54 @@ const AccountInfo = () => {
           <form>
             {/* title input */}
             <div className="title-box">
-              <input id="title-input" value={inputTitleValue} onChange={(e)=>setInputTitleValue(e.target.value)} type="text" name="" required />
+              <input
+                id="title-input"
+                value={inputTitleValue}
+                onChange={(e) => setInputTitleValue(e.target.value)}
+                type="text"
+                name=""
+                required
+              />
               <label id="title-lable">write a title</label>
-              <img onClick={handleClearTitleInputValue} id="delete-input-value-btn" src="/public/modal-imgs/close-circle.svg" alt="close-btn"/>
+              <img
+                onClick={handleClearTitleInputValue}
+                id="delete-input-value-btn"
+                src="/public/modal-imgs/close-circle.svg"
+                alt="close-btn"
+              />
             </div>
             {/* add person input */}
             <div className="add-person-box">
-              <input id="add-person-input"  type="text" name="" required />
-              <label>add person</label>
+              <input id="add-person-input" type="text" name="" required />
+              <label id="add-person-lable">add person</label>
+              <img
+                id="arrow-down-btn"
+                src="/public/modal-imgs/arrow-drop-down.svg"
+                alt="arrowBtn"
+              />
+            </div>
+            {/* the person select-box */}
+            <div className="person-select-box-contaniner">
+              <input
+                className="modal-search-form"
+                type="search"
+                placeholder="Search..."
+              />
+              <div className="modal-search-options">
+                {personListArray.map((item, index) => (
+                  <div className="person-info" key={index}>
+                    <input type="checkbox" />
+                    <img src={item.icon} alt="person-avatar" />
+                    <span>
+                      {item.name}/{item.id}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="status-info">
+                <p>Selected: 3</p>
+                <button>Clear selected</button>
+              </div>
             </div>
           </form>
         </div>

@@ -171,6 +171,11 @@
   font-size: 24px;
   text-align: center;
 }
+.modal form {
+  display: grid;
+  gap: 25px;
+  padding: 0px 22px;
+}
 /* the title input */
 .modal form .title-box {
   position: relative;
@@ -196,10 +201,13 @@
 }
 .modal form #delete-input-value-btn {
   position: absolute;
-  top: 20px;
-  right: 1px;
+  width: 21px;
+  padding: 10px;
+  top: 9px;
+  right: -9px;
   cursor: pointer;
   transition: all 0.1s;
+  border-radius: 50px;
 }
 .modal form #delete-input-value-btn:hover {
   background-color: #f2f4f7;
@@ -219,6 +227,134 @@
 .modal form #title-input:focus {
   /* border: none; */
   outline: 2px solid #6941c6 !important;
+}
+/*---------- add person input -------------*/
+.modal form .add-person-box {
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  width: 567px;
+}
+.modal form #add-person-input {
+  font-size: 16px;
+  width: inherit;
+  font-weight: 400;
+  padding-left: 13px;
+  height: 56px;
+  border: 1px solid #79747e;
+  border-radius: 4px;
+}
+.modal form #add-person-lable {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.modal form #arrow-down-btn {
+  position: absolute;
+  width: 35px;
+  top: 12px;
+  right: -7px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.modal form #arrow-down-btn:hover {
+  background-color: #f2f4f7;
+  border-radius: 50px;
+}
+.modal form .add-person-box input:focus ~ img,
+.modal form .add-person-box input:valid ~ img {
+  transform: rotate(180deg);
+}
+
+/* the :focus is when the input is active */
+/* the :valid is for when the input has value mantain this style*/
+.modal form .add-person-box input:focus ~ label,
+.modal form .add-person-box input:valid ~ label {
+  left: 12px !important;
+  top: -7px !important;
+  background: #f2f4f7;
+  color: #6941c6;
+  padding: 0px 4px;
+  font-size: 12px;
+}
+.modal form #add-person-input:focus {
+  /* border: none; */
+  outline: 2px solid #6941c6 !important;
+}
+.modal form .person-select-box-contaniner {
+  width: inherit;
+  height: 364px;
+  border-radius: 4px;
+  border: 1px solid #475467;
+  padding: 10px 13px;
+}
+
+.modal form .modal-search-form {
+  border-radius: 4px;
+  border: 1px solid #667085;
+  width: 555px;
+  height: 40px;
+  padding-left: 40px;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat 13px center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #344054;
+  margin-bottom: 8px;
+}
+.modal form .modal-search-options {
+  display: grid;
+  gap: 5px;
+  overflow-y: scroll;
+  height: 268px;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.modal-search-options::-webkit-scrollbar {
+  display: none;
+}
+.modal form .person-info {
+  position: relative;
+  background-color: #f9f5ff;
+  width: 545px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+}
+.modal form .person-info img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+}
+
+.modal form input[type="checkbox"] {
+  height: 18px;
+  width: 18px;
+  accent-color: #6941c6;
+  cursor: pointer;
+}
+.modal form .status-info {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eaecf0;
+  margin-top: 20px;
+}
+.modal form .status-info p {
+  font-weight: 400;
+  font-size: 12px;
+}
+.modal form button {
+  font-weight: 400;
+  font-size: 12px;
+  color: #1570ef;
+  background-color: transparent;
+  border: none;
 }
 
 /*-------- modal open------- */

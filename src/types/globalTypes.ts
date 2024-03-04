@@ -20,5 +20,12 @@ export type todoType = {
   icon: string;
 };
 
+export type personType = {
+  name: string;
+  id: string;
+  icon: string;
+  checked: "true" | "false";
+};
+
 // function types
 export type voidFunc = () => void;
