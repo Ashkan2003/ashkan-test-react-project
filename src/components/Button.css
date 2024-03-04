@@ -1,0 +1,47 @@
+/* custom-primaty-btn */
+.custom-primary-btn {
+  background-color: #6941c6 !important;
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  width: 93px;
+  height: 40px;
+  font-size: 16px !important;
+  font-family: Josefin Sans;
+  font-weight: 700 !important;
+  transition: color 0.6s, background-color 0.6s !important;
+  cursor: pointer;
+}
+.custom-primary-btn:hover {
+  background-color: #b692f6 !important;
+  color: #1d2939 !important;
+}
+.custom-primary-btn:active {
+  transition-duration: 0.1s !important;
+  background-color: #42307d !important;
+  color: white !important;
+}
+
+/* custom-secondary-btn */
+.custom-secondary-btn {
+    background-color: #F4EBFF !important;
+    color: #6941C6 !important;
+    border: none;
+    border-radius: 8px;
+    width: 93px;
+    height: 40px;
+    font-size: 16px !important;
+    font-family: Josefin Sans;
+    font-weight: 700 !important;
+    transition: color 0.6s, background-color 0.6s !important;
+    cursor: pointer;
+  }
+  .custom-secondary-btn:hover {
+    background-color: #D6BBFB !important;
+    color: #42307D !important;
+  }
+  .custom-secondary-btn:active {
+    transition-duration: 0.1s !important;
+    background-color: #42307D !important;
+    color: white !important;
+  }

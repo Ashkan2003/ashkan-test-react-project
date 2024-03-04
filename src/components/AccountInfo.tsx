@@ -3,6 +3,8 @@ import { personType, todoType, voidFunc } from "../types/globalTypes";
 import "./AccountInfo.css";
 import AddTodoBtn from "./AddTodoBtn";
 import Todo from "./Todo";
+import Button from "./Button";
+import Badge from "./Badge";
 
 const todoList: todoType[] = [
   {
@@ -48,7 +50,7 @@ const personListArray: personType[] = [
     checked: "false",
   },
   {
-    name: "Matin mohammadi",
+    name: "Matin moham",
     id: "0787",
     icon: "/public/modal-imgs/avatar-7png.png",
     checked: "false",
@@ -66,13 +68,13 @@ const personListArray: personType[] = [
     checked: "false",
   },
   {
-    name: "Matin abbasi",
+    name: "Matin rezaie",
     id: "0234",
     icon: "/public/modal-imgs/avatar-1.png",
-    checked: "true",
+    checked: "false",
   },
   {
-    name: "Matin ghadri",
+    name: "Matin ghaadri",
     id: "0874",
     icon: "/public/modal-imgs/avatar-2png.png",
     checked: "true",
@@ -81,10 +83,30 @@ const personListArray: personType[] = [
 
 const AccountInfo = () => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const [isSelectBoxOpen, setSelectBoxOpen] = useState(false);
   const [inputTitleValue, setInputTitleValue] = useState("");
+  const [personNameInputValue, setPersonNameInputValue] = useState("");
+  const [searchInputValue, setSearchInputValue] = useState("");
+
+  const searchedPersonArray = personListArray.filter((person) => {
+    if (!searchInputValue) return null;
+    const personName = searchInputValue.toLowerCase().trim()
+    if (person.name.toLowerCase().includes(personName)) {
+      return person;
+    } else {
+      return null;
+    }
+  });
+
+  console.log(searchedPersonArray, "sss");
 
   const handleToggleModal: voidFunc = () => {
     setModalOpen((isOpen) => !isOpen);
+    setSelectBoxOpen(false);
+  };
+
+  const handleToggleSelectBox = () => {
+    setSelectBoxOpen(true);
   };
 
   const handleClearTitleInputValue = () => {
@@ -170,36 +192,62 @@ const AccountInfo = () => {
             </div>
             {/* add person input */}
             <div className="add-person-box">
-              <input id="add-person-input" type="text" name="" required />
+              <input
+                onClick={handleToggleSelectBox}
+                id="add-person-input"
+                type="text"
+                value={personNameInputValue}
+                onChange={(e) => setPersonNameInputValue(e.target.value)}
+                required
+              />
               <label id="add-person-lable">add person</label>
               <img
                 id="arrow-down-btn"
                 src="/public/modal-imgs/arrow-drop-down.svg"
                 alt="arrowBtn"
               />
+              <div className="checked-badge-container">
+                {personListArray.map(
+                  (item, index) =>
+                    item.checked === "true" && <Badge item={item} key={index} />
+                )}
+              </div>
             </div>
             {/* the person select-box */}
-            <div className="person-select-box-contaniner">
-              <input
-                className="modal-search-form"
-                type="search"
-                placeholder="Search..."
+            {isSelectBoxOpen && (
+              <div className="person-select-box-contaniner">
+                <input
+                  className="modal-search-form"
+                  type="search"
+                  placeholder="Search..."
+                  value={searchInputValue}
+                  onChange={(e) => setSearchInputValue(e.target.value)}
+                />
+                <div className="modal-search-options">
+                  {searchedPersonArray.map((item, index) => (
+                    <div className="person-info" key={index}>
+                      <input type="checkbox" />
+                      <img src={item.icon} alt="person-avatar" />
+                      <span>
+                        {item.name}/{item.id}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <div className="status-info">
+                  <p>Selected: 3</p>
+                  <button>Clear selected</button>
+                </div>
+              </div>
+            )}
+            {/* the btns */}
+            <div className="btns-container">
+              <Button
+                handleClick={handleToggleModal}
+                text="Cancel"
+                type="secondary"
               />
-              <div className="modal-search-options">
-                {personListArray.map((item, index) => (
-                  <div className="person-info" key={index}>
-                    <input type="checkbox" />
-                    <img src={item.icon} alt="person-avatar" />
-                    <span>
-                      {item.name}/{item.id}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <div className="status-info">
-                <p>Selected: 3</p>
-                <button>Clear selected</button>
-              </div>
+              <Button text="Accept" type="primary" />
             </div>
           </form>
         </div>

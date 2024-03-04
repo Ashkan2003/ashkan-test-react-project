@@ -1,0 +1,20 @@
+.badge {
+  width: 168px;
+  height: 32px;
+  background-color: #f4ebff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.badge .avatar {
+  width: 24.21px;
+  border-radius: 50px;
+}
+.badge span {
+  font-weight: 400;
+  font-size: 16px;
+}
+.badge .close-icon {
+  width: 20px;
+}
