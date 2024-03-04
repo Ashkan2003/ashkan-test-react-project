@@ -90,7 +90,7 @@ const AccountInfo = () => {
 
   const searchedPersonArray = personListArray.filter((person) => {
     if (!searchInputValue) return null;
-    const personName = searchInputValue.toLowerCase().trim()
+    const personName = searchInputValue.toLowerCase().trim();
     if (person.name.toLowerCase().includes(personName)) {
       return person;
     } else {
@@ -111,6 +111,16 @@ const AccountInfo = () => {
 
   const handleClearTitleInputValue = () => {
     setInputTitleValue("");
+  };
+
+  // add new todo to todo-list when the user submit the form
+  const handleAddNewTodo = () => {
+    todoList.push({
+      icon: "/public/todo-list-imgs/clipboard-task.svg",
+      title: inputTitleValue,
+      date: "Mar 12 at 9:30 pm",
+    });
+    setModalOpen(false);
   };
 
   return (
@@ -158,8 +168,8 @@ const AccountInfo = () => {
           {todoList.map((todo, index) => (
             <Todo key={index} todo={todo} />
           ))}
-          <AddTodoBtn handleToggleModal={handleToggleModal} />
         </div>
+        <AddTodoBtn handleToggleModal={handleToggleModal} />
       </div>
       {/* the board meeting-section */}
       <div className="board-text">
@@ -191,9 +201,8 @@ const AccountInfo = () => {
               />
             </div>
             {/* add person input */}
-            <div className="add-person-box">
+            <div onClick={handleToggleSelectBox} className="add-person-box">
               <input
-                onClick={handleToggleSelectBox}
                 id="add-person-input"
                 type="text"
                 value={personNameInputValue}
@@ -226,7 +235,11 @@ const AccountInfo = () => {
                 <div className="modal-search-options">
                   {searchedPersonArray.map((item, index) => (
                     <div className="person-info" key={index}>
-                      <input type="checkbox" />
+                      {item.checked === "true" ? (
+                        <input type="checkbox" checked />
+                      ) : (
+                        <input type="checkbox" />
+                      )}
                       <img src={item.icon} alt="person-avatar" />
                       <span>
                         {item.name}/{item.id}
@@ -247,7 +260,11 @@ const AccountInfo = () => {
                 text="Cancel"
                 type="secondary"
               />
-              <Button text="Accept" type="primary" />
+              <Button
+                handleClick={handleAddNewTodo}
+                text="Accept"
+                type="primary"
+              />
             </div>
           </form>
         </div>
