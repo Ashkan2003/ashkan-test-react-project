@@ -1,3 +1,8 @@
+# some ing from app 
+![Untitled](https://github.com/Ashkan2003/ashkan-test-react-project/assets/125794999/5cfa57f0-7751-4f32-b14e-f88bea64d123)
+
+![Untitled](https://github.com/Ashkan2003/ashkan-test-react-project/assets/125794999/5eab861a-f858-446e-a20d-375505ab5050)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
